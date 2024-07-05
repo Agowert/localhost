@@ -30,9 +30,17 @@ foreach($arResult as $arItem):?>
 	<?endif?>
 
 	<?if ($arItem["IS_PARENT"]):?>
+		
 
 		<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-			<li><a href="<?=$arItem["LINK"]?>" class="<?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?>"><?=$arItem["TEXT"]?></a>
+			<?
+			$Color = "";
+			if (isset($arItem['PARAMS']['COLOR'])) {
+				$Color = $arItem['PARAMS']['COLOR'];
+				?>
+			
+			<?} ?>
+			<li><a href="<?=$arItem["LINK"]?>" class="<?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?> <?=$Color?>"><?=$arItem["TEXT"]?></a>
 				<ul>
 		<?else:?>
 			<li<?if ($arItem["SELECTED"]):?> class="item-selected"<?endif?>><a href="<?=$arItem["LINK"]?>" class="parent"><?=$arItem["TEXT"]?></a>
