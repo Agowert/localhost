@@ -114,7 +114,7 @@
 		"MENU_CACHE_TIME" => "3600",
 		"MENU_CACHE_TYPE" => "A",
 		"MENU_CACHE_USE_GROUPS" => "Y",
-		"ROOT_MENU_TYPE" => "bottom",
+		"ROOT_MENU_TYPE" => "bottom_ex1",
 		"USE_EXT" => "N",
 		"COMPONENT_TEMPLATE" => "bottom"
 	),
