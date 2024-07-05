@@ -99,13 +99,16 @@ $APPLICATION->SetTemplateCSS(SITE_TEMPLATE_PATH."/css/owl.carousel.css");
 if ($APPLICATION->GetCurPage(false) != '/') {?>
   
   
-    <div class="breadcrumbs-box">
-    <div class="inner-wrap">
-        <a href="">Главная</a>
-        <a href="">Мебель</a>
-        <span>Выставки и события</span>
-    </div>
-</div>
+  <?$APPLICATION->IncludeComponent(
+	"bitrix:breadcrumb",
+	"template1",
+	Array(
+		"COMPONENT_TEMPLATE" => ".default",
+		"PATH" => "",
+		"SITE_ID" => "s1",
+		"START_FROM" => "0"
+	)
+);?>
 
 <?
 } else {
